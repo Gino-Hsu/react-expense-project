@@ -36,7 +36,7 @@ const ExpenseForm = props => {
   const handleSubmit = e => {
     e.preventDefault()
     const expenseData = {
-      tilte: enteredTitle,
+      title: enteredTitle,
       amount: enteredAmount,
       date: new Date(enteredDate),
     }
