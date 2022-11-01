@@ -37,7 +37,7 @@ const ExpenseForm = props => {
     e.preventDefault()
     const expenseData = {
       title: enteredTitle,
-      amount: enteredAmount,
+      amount: Number(enteredAmount),
       date: new Date(enteredDate),
     }
 
@@ -56,6 +56,7 @@ const ExpenseForm = props => {
             type='text'
             value={enteredTitle}
             onChange={handleTitleChange}
+            required='required'
           />
         </div>
         <div className='new-expense__control'>
@@ -66,6 +67,7 @@ const ExpenseForm = props => {
             step='0.01'
             value={enteredAmount}
             onChange={handleAmountChange}
+            required='required'
           />
         </div>
         <div className='new-expense__control'>
@@ -76,6 +78,7 @@ const ExpenseForm = props => {
             max='2022.12-31'
             value={enteredDate}
             onChange={handleDateChange}
+            required='required'
           />
         </div>
       </div>
